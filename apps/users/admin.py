@@ -10,7 +10,7 @@ class UserAdmin(BaseUserAdmin):
     fieldsets = BaseUserAdmin.fieldsets + (
         ('추가 정보', {'fields': ('profile_image', 'gender', 'introduction')}),
     )
-    list_display = ['username', 'email', 'profile_image', 'gender']
+    list_display = ['id', 'username', 'email', 'profile_image', 'gender']
 
 
 admin.site.register(User, UserAdmin)

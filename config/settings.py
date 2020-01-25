@@ -35,9 +35,9 @@ PACKAGES = [
 ]
 
 PROJECT_APPS = [
-    'users',
-    'posts',
-    'comments'
+    'apps.users',
+    'apps.posts',
+    'apps.comments'
 ]
 
 DJANGO_APPS = [
