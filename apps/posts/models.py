@@ -12,4 +12,10 @@ class Post(models.Model):
                                 processors=[ResizeToFill(600, 600)],
                                 format='JPEG', options={'quality': 90}
                                 )
-    content = models.CharField(max_length=50)
+    location = models.CharField(max_length=140)
+    caption = models.CharField(max_length=140)
+
+
+class Like(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True)
+    photo = models.ForeignKey(Post, null=True, related_name='likes')
