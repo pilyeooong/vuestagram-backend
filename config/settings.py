@@ -31,7 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 PACKAGES = [
-    'rest_framework'
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'rest_auth.registration',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 PROJECT_APPS = [
@@ -47,6 +53,7 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PACKAGES + PROJECT_APPS
@@ -126,6 +133,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+SITE_ID = 1
 
 
 # Static files (CSS, JavaScript, Images)
