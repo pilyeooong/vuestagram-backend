@@ -14,7 +14,7 @@ User = get_user_model()
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
-    lookup_field = "id"
+    lookup_field = 'id'
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
 
