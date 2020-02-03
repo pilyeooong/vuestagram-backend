@@ -13,9 +13,9 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Like)
 class LikeAdmin(admin.ModelAdmin):
-    list_display = ['author', 'photo']
+    list_display = ['author', 'post']
 
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ['author', 'photo', 'comment', 'created_at', 'updated_at']
+    list_display = ['author', 'post', 'comment', 'created_at', 'updated_at']
